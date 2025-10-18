@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-bg: hsl(202, 86%, 94%);
+  --card-bg: hsl(202, 55%, 16%);
+  --accent: hsl(61, 70%, 52%);
+  --text-light: hsl(203, 41%, 72%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text-light);
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 850px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: var(--white);
+}
+
+.img {
+  flex: 1;
+  border: 4px solid var(--accent);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.socials a svg {
+  width: 20px;
+  fill: var(--accent);
+  transition: transform 0.2s, fill 0.2s;
+}
+
+.socials a:hover svg,
+.socials a:focus svg {
+  fill: var(--white);
+  transform: scale(1.1);
+}
+
+.list-section {
+  margin-top: 1rem;
+}
+
+.list-section h2 {
+  color: var(--accent);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style: inside square;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .img {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
