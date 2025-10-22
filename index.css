@@ -15,6 +15,8 @@
   --accent: hsl(61, 70%, 52%);
   --text-light: hsl(203, 41%, 72%);
   --white: hsl(0, 0%, 100%);
+  --error: hsl(0, 90%, 65%);
+  --success: hsl(120, 60%, 45%);
 }
 
 body {
@@ -24,9 +26,46 @@ body {
   font-size: 16px;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+
+header {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-btn {
+  cursor: pointer;
+  display: none;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav__links a:hover,
+.nav__links a[aria-current="page"] {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .card {
@@ -116,5 +155,15 @@ ul {
 
   .socials {
     justify-content: center;
+  }
+}
+
+@media (max-width: 426px) {
+  .nav__links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
   }
 }
