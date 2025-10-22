@@ -31,6 +31,12 @@ main {
   flex-direction: column;
   gap: 0.3rem;
   width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.form-desc {
+  display: flex;
+  justify-content: space-between;
 }
 
 label {
@@ -104,5 +110,9 @@ footer {
 @media (max-width: 600px) {
   .contact-card {
     padding: 1.5rem;
+  }
+
+  label[for="message"] + .error {
+    font-size: 0.7rem;
   }
 }

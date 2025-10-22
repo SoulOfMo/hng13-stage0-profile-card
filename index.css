@@ -159,11 +159,8 @@ ul {
 }
 
 @media (max-width: 426px) {
-  .nav__links {
-    display: none;
-  }
-
-  .menu-btn {
-    display: block;
+  header .nav {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
